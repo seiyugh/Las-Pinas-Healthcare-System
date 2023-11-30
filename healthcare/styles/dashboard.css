@@ -1,0 +1,247 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+}
+
+body {
+    background-color: rgba(151, 254, 237, 0.6);
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10vw 10vh;
+    flex-wrap: wrap;
+    font-size: large;
+    overflow: hidden;
+}
+
+.container table {
+    font-size: medium;
+}
+
+.home {
+    display: flex;
+    transform: translate(40px, 10px);
+    text-decoration: none;
+}
+
+.home a {
+    font-family: Verdana;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #071952;
+}
+
+.message {
+    background: transparent;
+    padding: 30px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+}
+
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    text-align: center;
+    justify-items: center;
+    display: flex;
+    align-items: center;
+    font-size: medium;
+}
+
+.popup-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.logo {
+    width: 4vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8.5vw;
+}
+
+.logo img {
+    width: 4vw;
+    height: 9vh;
+    border-radius: 50%;
+}
+
+.box {
+    border-radius: 50px;
+    background-color: rgba(147, 215, 214, 0.6);
+    width: 100%;
+    max-width: 90vw;
+    height: 100%;
+    max-height: 80vh;
+    display: inline-block;
+    padding: 25px;
+    box-shadow: 0 3px rgba(0, 0, 0, 0.479);
+    transform: translate(20px, -110px);
+    justify-content: start end;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.navbar {
+    padding-left: 20vw;
+    background-color: rgba(147, 215, 214, 0.6);
+    margin: 20px 30px;
+    border-radius: 20px;
+    font-size: medium;
+}
+
+.nav-btn {
+    border-radius: 10px;
+    margin-left: 20px;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+    background-color: rgba(255, 255, 255);
+}
+.nav-home{
+    border-radius: 10px;
+    margin-left: 20px;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+}
+.nav-btn:hover {
+    background-color: rgb(138, 138, 138);
+    color: white;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+table {
+    font-size: medium;
+    /* Adjust the font size as needed */
+}
+
+th,
+td {
+    font-size: medium;
+    /* Adjust the font size as needed */
+}
+.nav-link{
+    padding-left: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        overflow-x: hidden;
+    }
+    body {
+        padding-left: 20px;
+    }
+    .container {
+        flex-direction: column;
+        margin: 10vh 0;
+        padding: auto;
+    }
+    .box {
+        max-width: 90vw;
+        height: 100%;
+        max-height: 110vh;
+        transform: translateY(0);
+    }
+    .logo {
+        margin: 0 auto;
+    }
+    .nav-btn,
+    .add-btn {
+        width: 100%;
+        max-width: 90vw;
+        transform: translate(0, 1vh);
+    }
+    .sex-selector {
+        max-width: none;
+    }
+    .sex-selector input {
+        margin-left: 25vw;
+    }
+    .field-input input {
+        width: 100%;
+        max-width: 90vw;
+    }
+    .appointment {
+        transform: translateY(0);
+        margin: 10px;
+        font-size: 2rem;
+    }
+    .separate {
+        transform: translate(0, 0);
+        margin-left: 0;
+        margin-bottom: 2vh;
+    }
+    .appointment {
+        transform: translate(5vw, 0);
+        margin: 10px;
+        font-size: small;
+    }
+    .nav-btn {
+        display: none;
+    }
+    .hamburger {
+        display: flex;
+        margin-left: auto;
+        margin-right: 10px;
+    }
+    .nav-item {
+        display: block;
+        margin-top: 10px;
+    }
+    .nav-open {
+        display: flex;
+    }
+    .table {
+        overflow-x: scroll;
+    }
+}

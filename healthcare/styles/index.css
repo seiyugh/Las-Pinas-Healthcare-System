@@ -1,0 +1,152 @@
+   * {
+       padding: 0;
+       margin: 0;
+       box-sizing: border-box;
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+       scroll-behavior: smooth;
+   }
+   
+   body {
+/* Check if the linear gradient and image path are correct */
+        background-image: linear-gradient(to top, rgba(0, 0, 50, 0.8), rgba(0, 0, 50, 0.8)), url('../images/bg.jpg');
+       flex-direction: column;
+       background-repeat: no-repeat;    
+       background-size: contain;
+   }
+   
+   .navigation {
+       background: #35A29F;
+       margin: 20px 20px;
+       padding: 10px;
+       box-shadow: 2px 2px #164342;
+       border-radius: 10px;
+   }
+   
+   .navigation img {
+       width: 50px;
+       border-radius: 50%;
+       border: 1px solid #000;
+       margin-left: 10px;
+   }
+   
+   .navigation li {
+       list-style: none;
+       top: 12px;
+       margin-top: 15px;
+   }
+   
+   .navigation li a {
+       color: white;
+       transition: .3s ease-in-out;
+       margin-right: 15px;
+   }
+   
+   .navigation li a:hover {
+       color: #071952;
+   }
+   
+   .navigation ul {
+       float: right;
+       padding: auto;
+   }
+   
+   .hero {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       padding: 100px;
+       height: 100vh;
+   }
+   
+   .hero a {
+    text-align:center;
+       text-decoration: none;
+       font-size: medium;
+       font-weight:600;
+       margin: 100px 2vw;
+       padding: 20px;
+       width: 100%;
+       max-width: 20vw;
+       border-radius: 30px;
+       border: none;
+       background-color: #97FEED;
+       color: #071952;
+       cursor: pointer;
+       transition: .3s ease-in-out;
+   }
+   
+   .hero a:hover {
+       background-color: #35A29F;
+       color: white;
+   }
+   
+   #wireframe2 {
+       background-color: #35A29F;
+       height: 100vh;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       transition: opacity 0.5s ease, transform 0.5s ease;
+   }
+   
+   .wireframe2-content-container {
+       text-align: center;
+       padding: 0 150px;
+       display: block;
+       z-index: 1000;
+   }
+   
+   .wireframe2-content-container2 {
+       text-align: center;
+       padding: 150px 150px 0px;
+       display: inline-block;
+       z-index: 1000;
+   }
+   
+   .wireframe2-content-container h1 {
+       margin-bottom: 30px;
+       text-shadow: 1px 1px #000;
+   }
+   
+   .wireframe2-content-container p {
+       font-weight: normal;
+   }
+   
+   .wireframe2-content-container2 h3 {
+       margin-bottom: 30px;
+       text-shadow: 1px 1px #000;
+   }
+   
+   .wireframe2-content-container2 p {
+       font-weight: normal;
+   }
+   
+   @media screen and (max-width: 877px) {
+       .hero {
+           padding: 10px;
+           /* Adjust padding for smaller screens */
+       }
+       body {
+           background: linear-gradient(rgba(0, 0, 50, 0.8), rgba(0, 0, 50, 0.8)), url(../images/hero-phone.png);
+           background-size: contain;
+           background-repeat: repeat-y;
+       }
+       .hero a {
+        display: block;
+           margin: 10px 0;
+           /* Remove horizontal margin on buttons for smaller screens */
+           width: 90%;
+           max-width: none;
+           font-size: medium;
+           /* Make the button full width */
+       }
+       .wireframe2-content-container,
+       .wireframe2-content-container2 {
+           padding: 10px;
+           /* Adjust padding for smaller screens */
+       }
+       .wireframe2 p {
+           font-size: small;
+       }
+   }

@@ -1,0 +1,161 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: rgba(151, 254, 237, 0.6);
+    overflow-x: hidden;
+}
+
+.edit-user-form {
+    background-color: rgba(147, 215, 214, 0.6);
+    width: 100%;
+    max-width: 30vw;
+    height: auto;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 3px rgba(0, 0, 0, 0.479);
+    transform: translate(35vw, 5vh);
+}
+
+.edit-user-form h3 {
+    text-align: center;
+    margin: 10px;
+    font-size: 1.5rem;
+    color: #071952;
+}
+
+.edit-user-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.edit-user-form .form-group {
+    margin: 15px;
+}
+
+.edit-user-form label {
+    font-weight: bold;
+}
+
+.edit-user-form input[type="text"],
+.edit-user-form input[type="date"],
+.edit-user-form input[type="tel"] {
+    width: 100%;
+    max-width: 90vw;
+    height: 5vh;
+    padding: 10px;
+    border-radius: 20px;
+    transition: 0.3s ease-in-out;
+    outline: none;
+    border: none;
+    margin: 0;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.edit-user-form .form-group label,
+.edit-user-form input[type="radio"] {
+    margin-right: 10px;
+}
+
+.edit-user-form input[type="radio"] {
+    transform: scale(1.2);
+}
+
+.edit-user-form .btn {
+    width: 100%;
+    max-width: 50%;
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: #071952;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin: 20px auto;
+}
+
+.edit-user-form .btn:hover {
+    background-color: #010b2b;
+}
+
+@media screen and (max-width: 768px) {
+    .edit-user-form {
+        max-width: 90vw;
+        transform: translate(0, 0);
+    }
+    .edit-user-form input[type="radio"] {
+        transform: scale(1);
+    }
+}
+
+
+/* Add User Button Styles */
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+
+/* Add User Form Styles */
+
+.add-user-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.add-user-form h3 {
+    text-align: center;
+}
+
+.form-group {
+    margin: 10px 0;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group input[type="radio"] {
+    margin-right: 10px;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-success:hover {
+    background-color: #1e7e34;
+}

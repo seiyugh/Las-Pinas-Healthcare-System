@@ -1,0 +1,119 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: rgba(151, 254, 237, 0.715);
+    overflow: hidden;
+}
+
+.admin-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25vh;
+}
+
+.home {
+    transform: translateX(30px)translateY(30px);
+    text-decoration: none;
+}
+
+.home a {
+    font-family: Verdana;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #071952;
+}
+
+.logo {
+    width: 4vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8.5vw;
+}
+
+.logo img {
+    width: 9vw;
+    height: 9vh;
+    border-radius: 50%;
+}
+
+.admin-login-form {
+    border-radius: 50px;
+    background-color: rgba(147, 215, 214, 0.6);
+    width: 100%;
+    max-width: 25vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    box-shadow: 0 3px rgba(0, 0, 0, 0.479);
+    transform: translateY(-50px);
+}
+
+.admin-login-form h2 {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.admin-login-form input {
+    margin: 15px;
+    width: 100%;
+    max-width: 80vw;
+    /* Increased max-width value */
+    height: 5vh;
+    padding: 20px;
+    border-radius: 20px;
+    transition: 0.3s ease-in-out;
+    outline: none;
+    border: none;
+    transform: translateX(-10px);
+}
+
+#submit-button {
+    margin: 15px;
+    width: 100%;
+    max-width: 40vw;
+    /* Increased max-width value */
+    padding: 10px;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    background-color: #071952;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    transform: translateX(-10px);
+}
+
+#submit-button:hover {
+    background-color: #010b2b;
+}
+
+
+/* Media query for smaller screens */
+
+@media screen and (max-width: 800px) {
+    .admin-login {
+        flex-direction: column;
+        margin-top: 10vh;
+    }
+    .logo {
+        margin: 0 auto;
+    }
+    .admin-login-form {
+        max-width: 80vw;
+        transform: translateY(20px);
+    }
+    .logo img {
+        width:25vw;
+        height:10vh;
+    }
+}
