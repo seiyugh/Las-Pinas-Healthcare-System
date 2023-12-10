@@ -64,7 +64,20 @@ body {
     align-items: center;
     font-size: medium;
 }
-
+.modify-btn {
+    width: 100%;
+    max-width: 20vw;
+    padding: 10px;
+    border-radius: 50px;
+    color: #000;
+    font-weight: bold;
+    font-size: .9rem;
+    background-color: rgba(147, 215, 214, 0.6);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin-left: 65vw;
+    margin-top: 27vh;
+}
 .popup-close-btn {
     position: absolute;
     top: 10px;
@@ -194,6 +207,9 @@ td {
     }
     .logo {
         margin: 0 auto;
+    }
+    .modify-btn{
+        max-width: 40vw;
     }
     .nav-btn,
     .add-btn {

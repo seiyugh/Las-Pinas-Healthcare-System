@@ -93,7 +93,7 @@ body {
     background-color: rgba(147, 215, 214, 0.6);
     width: 100%;
     max-width: 100vw;
-    height: 80vh;
+    height: 85vh;
     min-height: 60vh;
     display: inline-block;
     padding: 20px;
@@ -237,8 +237,7 @@ h2 {
     text-align: center;
     justify-content: center;
     font-size: 1rem;
-    margin-left: 37vw;
-    margin-top: -15vh;
+    margin-top: 20px;
 }
 
 .appointment-btn {
@@ -305,14 +304,15 @@ h2 {
         margin: 10vh 0;
         padding: auto;
         margin-bottom: 100px;
+        height: 150vh;
     }
 
     .box {
         margin-right: 10px;
         max-width: none;
-        height: 130vh;
-        min-height: 0;
-        transform: translateY(0);
+        height: 135vh;
+        min-height: 130vh;
+        transform: translateY(-6vh);
         margin-right: 10px;
     }
 
@@ -350,7 +350,7 @@ h2 {
         width: 100%;
         max-height: none;
         max-width: 100%;
-        transform: translate(-9vw, 62vh);
+        transform: translate(-9vw, 60vh);
     }
 
     .register-now {
@@ -370,16 +370,19 @@ h2 {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 999px) {
     .container {
         flex-direction: column;
-        height: 140vh;
+        height: 130vh;
     }
     .register-now {
-        transform: translate(-18vw, -7vh);
+        transform: translate(0vw, 53vh);
         font-size: small;
     }
-
+    .box{
+        height: 130vh;
+        max-height: none;
+    }
     .separate1 {
         transform: translateX(10px);
         width: 80vw;
@@ -398,4 +401,29 @@ h2 {
         border-radius: 20px;
         transform: translate(1vw, -2vh);
     }
+}
+@media screen and (max-width: 380px) {
+    *{
+        font-size: small;        
+    }
+    .box {
+        margin-right: 10px;
+        max-width: none;
+        height: 150vh;
+        max-height: none;
+        transform: translateY(0);
+        margin-right: 10px;
+    }
+    .container {
+        height:150vh;
+    }
+    .avail-btn,
+    #avail-btn {
+        font-size: smaller;
+        width: 100%;
+        max-height: none;
+        max-width: 100%;
+        transform: translate(-9vw, 65vh);
+    }
+
 }

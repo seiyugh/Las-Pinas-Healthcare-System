@@ -1,0 +1,38 @@
+/* Add your styles for the available appointments page here */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: rgba(151, 254, 237, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+body h2{
+    margin-top: 20px;
+}
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(147, 215, 214, 0.6);
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    max-height:85vh;
+    overflow-y: scroll;
+}
+
+.appointmentSlot {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #000000;
+    margin-bottom: 10px;
+}

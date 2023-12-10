@@ -22,10 +22,10 @@
                         <a class="nav-link rounded mx-3" href="#" style="background-color: rgba(0, 0, 0, 0.7); color: white;">Patients Registered</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link rounded mx-3" href="#">Appointments</a>
+                        <a class="nav-link rounded mx-3" href="appointment-history.php">Appointment History</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link rounded mx-3" href="appointment-records.php">Appointment Records</a>
+                        <a class="nav-link rounded mx-3" href="appointment-records.php">Appointments</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="index.php"><i class="fa fa-home"></i></a>

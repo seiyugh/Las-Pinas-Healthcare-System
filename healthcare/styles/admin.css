@@ -97,6 +97,17 @@ body {
     background-color: #010b2b;
 }
 
+.password-container {
+    position: relative;
+}
+
+#eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
 
 /* Media query for smaller screens */
 

@@ -1,0 +1,38 @@
+{
+    "8": {
+        "date": "Wed Dec 13 2023",
+        "time": "9:00 PM"
+    },
+    "16": {
+        "date": "Wed Dec 27 2023",
+        "time": "5:00 PM"
+    },
+    "17": {
+        "date": "Tue Dec 26 2023",
+        "time": "4:00 PM"
+    },
+    "18": {
+        "date": "Thu Dec 28 2023",
+        "time": "3:00 PM"
+    },
+    "19": {
+        "date": "Fri Dec 29 2023",
+        "time": "12:00 PM"
+    },
+    "20": {
+        "date": "Sun Dec 31 2023",
+        "time": "4:00 PM"
+    },
+    "22": {
+        "date": "Tue Dec 26 2023",
+        "time": "3:00 PM"
+    },
+    "23": {
+        "date": "Wed Jan 03 2024",
+        "time": "4:00 PM"
+    },
+    "24": {
+        "date": "Thu Dec 14 2023",
+        "time": "5:00 PM"
+    }
+}

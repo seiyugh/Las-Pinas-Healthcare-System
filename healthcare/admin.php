@@ -18,7 +18,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     } else {
 
-        $error = "Invalid credentials. Please try again.";
+        $error = "<div class='message'>
+        <p>Wrong Username or Password</p>
+         </div> <br>";
     }
 }
 ?>
@@ -45,24 +47,40 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <div class="admin-login">
         <div class="admin-login-form">
-            <form id="admin-login" method="POST" action="admin.php">
-                <!-- Set the form method and action -->
-                <div class="logo">
-                    <img src="images/logo.png">
-                </div>
-                <h2>ADMIN LOGIN</h2>
-                <?php if (isset($error)) { ?>
-                <div class="error-message">
-                    <?php echo $error; ?>
-                </div>
-                <?php } ?>
+        <form id="admin-login" method="POST" action="admin.php">
+    <!-- Set the form method and action -->
+    <div class="logo">
+        <img src="images/logo.png">
+    </div>
+    <h2>ADMIN LOGIN</h2>
+    <?php if (isset($error)) { ?>
+        <div class="error-message">
+            <?php echo $error; ?>
+        </div>
+                        <?php } ?>
                 <label for="email">Enter your Email</label>
                 <input type="email" name="email" placeholder="username@example.com">
                 <label for="password">Enter your Password</label>
-                <input type="password" name="password" placeholder="password">
+                <div class="password-container">
+                    <input type="password" id="password" name="password" placeholder="password">
+                    <i class="fa" id="eye-icon" onclick="togglePassword()">&#xf06e;</i>
+                </div>
                 <button id="submit-button" type="submit">Login</button>
-                
 
+                <script>
+                    function togglePassword() {
+                        var passwordInput = document.getElementById("password");
+                        var eyeIcon = document.getElementById("eye-icon");
+
+                        if (passwordInput.type === "password") {
+                            passwordInput.type = "text";
+                            eyeIcon.style.color = "#007BFF"; // Change color to indicate password is visible
+                        } else {
+                            passwordInput.type = "password";
+                            eyeIcon.style.color = ""; // Reset color
+                        }
+                    }
+                </script>
             </form>
         </div>
     </div>

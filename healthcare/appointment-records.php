@@ -22,10 +22,10 @@
                         <a class="nav-link mx-3" id="patient-registered" href="patient-registered.php">Patients Registered</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mx-3" href="#">Appointments</a>
+                        <a class="nav-link mx-3" href="appointment-history.php">Appointment History</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link rounded mx-3" style="background-color: rgba(0, 0, 0, 0.7); color: white;" href="appointment-records.php">Appointment Records</a>
+                        <a class="nav-link rounded mx-3" style="background-color: rgba(0, 0, 0, 0.7); color: white;" href="appointment-records.php">Appointments</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="index.php"><i class="fa fa-home"></i></a>
@@ -49,7 +49,7 @@
         }
         ?>
 
-        <div class="table-responsive mx-1" style="background-color: rgba(147,215,214, 0.6); max-width:120vw; border-radius:10px">
+        <div class="table-responsive mx-auto w-100" style="background-color: rgba(147,215,214, 0.6); max-width:120vw; border-radius:10px">
             <table class="table table-hover text-center">
                 <thead class="table-dark">
                     <tr>
@@ -62,7 +62,7 @@
                         <th scope="col">Sex</th>
                         <th scope="col">Date</th>
                         <th scope="col">Time</th>
-                        <th scope="col">Edit/Delete</th>
+                        <th scope="col">Edit/Release/Delete</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -85,6 +85,7 @@
                             <td><?php echo $row["time"] ?></td>
                             <td>
                                 <a href="update-appointment.php?id=<?php echo $row["id"] ?>" class="link-dark"><i class="fa fa-pen-to-square fs-5 me-3"></i></a>
+                                <a href="delete-records.php?id=<?php echo $row['id']; ?>&redirect=appointment-history.php" class="link-dark" onclick="return confirm('Are you sure you want to remove this row? This will be stored in the Appointment History.');"><i class="fa fa-arrow-up fs-5 me-3"></i></a>
                                 <a href="#" class="link-dark" onclick="confirmDelete(<?php echo $row['id']; ?>)"><i class="fa fa-trash fs-5"></i></a>
                             </td>
                         </tr>
@@ -95,18 +96,22 @@
             </table>
         </div>
     </div>
-
+    <button id="modifyButton" class="modify-btn">Modify Appointments</button>
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 
 <script>
       function confirmDelete(userId) {
-        var result = window.confirm("Are you sure you want to delete this user?");
+        var result = window.confirm("Are you sure you want to delete this appointment?");
         if (result) {
-            // If the user confirms, redirect to the delete script with the user ID
-            window.location.href = "delete-appointment.php?id=" + userId;
+            // If the user confirms, redirect to the delete script with the appointment ID
+            window.location.href = "delete-records.php?id=" + userId + "&redirect=appointment-records.php";
         }
     }
+    document.getElementById('modifyButton').addEventListener('click', function () {
+            // Redirect to the modification form
+            window.location.href = 'modify-appointments.php';
+        });
 </script>
 </html>
